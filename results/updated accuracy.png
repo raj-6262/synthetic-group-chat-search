@@ -9,7 +9,7 @@ env:EMBEDDING_BACKEND="st"
  Semantic overall  : 77.5%
  Semantic (hard 8) : 87.5%
  TF-IDF overall    : 27.5%
- TF-IDF (hard 8)   : 0.0%
+ TF-IDF (hard 8)   : 50.0%
  Latency p50 / p95 : 11.4ms / 21.6ms
  Charts written to C:\Users\rajsi\Downloads\synthetic-group-chat-search-main finalwala\synthetic-group-chat-search-main\results/
 PS C:\Users\rajsi\Downloads\synthetic-group-chat-search-main finalwala\synthetic-group-chat-search-main> 
