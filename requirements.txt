@@ -1,0 +1,21 @@
+# Core
+numpy>=2.2
+scikit-learn>=1.9.1
+faiss-cpu>=1.15.0
+
+# Real semantic embeddings (needs internet access to download model
+# weights from huggingface.co the first time it runs - see README).
+# The project runs without these installed too, via an automatic
+# offline TF-IDF+SVD fallback (see src/embeddings.py).
+sentence-transformers
+torch
+
+# Backend
+fastapi>=0.141.1
+uvicorn>=0.52.4
+
+# Evaluation / charts
+matplotlib
+
+# Testing
+pytest

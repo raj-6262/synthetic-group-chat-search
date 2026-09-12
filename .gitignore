@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+results/matplotlib_cache/
+.DS_Store
+
+# Generated artifacts (regenerate with the scripts in src/ - keeping the
+# repo small and making it obvious nothing here is hand-edited data)
+models/*.npy
+models/*.pkl
+models/embed_meta.json
+index/*.index
