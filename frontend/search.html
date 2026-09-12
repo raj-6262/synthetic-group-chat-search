@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>ChatSense — Semantic Search</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+
+<body class="search-page">
+
+    <!-- Top navigation -->
+    <header class="search-navbar">
+
+        <div class="search-nav-container">
+
+            <a href="/" class="brand">
+                <span class="brand-icon">✦</span>
+                <span>ChatSense</span>
+            </a>
+
+            <div class="search-nav-right">
+
+                <div class="backend-indicator" id="statusCard">
+
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong id="statusText">
+                            Checking backend
+                        </strong>
+
+                        <small id="statusMeta">
+                            Connecting...
+                        </small>
+                    </div>
+
+                </div>
+
+                <a href="/" class="back-home">
+                    ← Home
+                </a>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <main class="search-app">
+
+        <!-- Header -->
+        <section class="search-intro">
+
+            <div>
+
+                <span class="section-kicker">
+                    SEMANTIC SEARCH
+                </span>
+
+                <h1>
+                    What are you
+                    <span>looking for?</span>
+                </h1>
+
+                <p>
+                    Ask naturally. Search 4,800+ group-chat messages
+                    by meaning instead of exact keywords.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- Search panel -->
+        <section class="search-workspace">
+
+            <div class="search-input-row">
+
+                <div class="search-input-wrapper">
+
+                    <span class="large-search-icon">⌕</span>
+
+                    <input
+                        id="q"
+                        type="text"
+                        value="What destination did everyone finally agree upon?"
+                        placeholder="Ask a question about the conversation..."
+                        autocomplete="off"
+                        aria-label="Search query"
+                    >
+
+                </div>
+
+                <button id="go" class="search-button">
+                    Search
+                    <span>→</span>
+                </button>
+
+            </div>
+
+
+            <!-- Filters -->
+            <div class="filters-row">
+
+                <div class="filter-group">
+
+                    <label for="participant">
+                        PARTICIPANT
+                    </label>
+
+                    <select id="participant">
+
+                        <option value="">
+                            All participants
+                        </option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group small-filter">
+
+                    <label for="topK">
+                        TOP K
+                    </label>
+
+                    <input
+                        id="topK"
+                        type="number"
+                        min="1"
+                        max="20"
+                        value="5"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="startDate">
+                        FROM
+                    </label>
+
+                    <input
+                        id="startDate"
+                        type="date"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label for="endDate">
+                        TO
+                    </label>
+
+                    <input
+                        id="endDate"
+                        type="date"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <!-- Example searches -->
+            <div class="suggestions">
+
+                <span class="suggestions-label">
+                    Try an example
+                </span>
+
+                <button
+                    class="suggestion active"
+                    data-query="What destination did everyone finally agree upon?"
+                >
+                    Trip decision
+                </button>
+
+                <button
+                    class="suggestion"
+                    data-query="What did Priya say about the budget?"
+                >
+                    Priya budget
+                </button>
+
+                <button
+                    class="suggestion"
+                    data-query="What did we discuss last month?"
+                >
+                    Last month
+                </button>
+
+                <button
+                    class="suggestion"
+                    data-query="Which programming language did the team finally choose?"
+                >
+                    Project stack
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Dataset stats -->
+        <section class="dataset-stats">
+
+            <div class="dataset-stat">
+                <span>Messages</span>
+                <strong id="messageCount">4,800</strong>
+            </div>
+
+            <div class="dataset-stat">
+                <span>Participants</span>
+                <strong>8</strong>
+            </div>
+
+            <div class="dataset-stat">
+                <span>Evaluation Queries</span>
+                <strong>40</strong>
+            </div>
+
+            <div class="dataset-stat">
+                <span>Hard Cases</span>
+                <strong>8</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Results -->
+        <section class="results-area">
+
+            <div class="results-heading">
+
+                <div>
+
+                    <span class="results-kicker">
+                        SEARCH RESULTS
+                    </span>
+
+                    <div
+                        id="detected"
+                        class="detected"
+                    ></div>
+
+                </div>
+
+                <div
+                    id="resultCount"
+                    class="result-count"
+                ></div>
+
+            </div>
+
+
+            <div
+                id="results"
+                class="results-list"
+            ></div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer search-footer">
+
+        <div class="footer-container">
+
+            <div class="brand footer-brand">
+                <span class="brand-icon">✦</span>
+                <span>ChatSense</span>
+            </div>
+
+            <p>
+                IT Geeks Assignment Demo · Raj Singh
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
